@@ -7,6 +7,7 @@ buttonStart.addEventListener('click', onButtonStart);
 buttonStop.addEventListener('click', onButtonStop);
 
 function onButtonStart() {
+  body.style.backgroundColor = getRandomHexColor();
   timerId = setInterval(() => {
     body.style.backgroundColor = getRandomHexColor();
   }, 1000);
