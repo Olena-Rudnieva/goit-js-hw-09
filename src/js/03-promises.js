@@ -31,8 +31,8 @@ function onAmountPromises() {
   return amountNumber;
 }
 
-function onSubmitForm(e) {
-   e.preventDefault();
+function onSubmitForm(event) {
+   event.preventDefault();
   let promiseNumber = onAmountPromises();
   let delay = Number(onFirstDelay());
   let step = Number(onDelayStep());
