@@ -39,6 +39,8 @@ flatpickr(inputEl, options);
 startBtn.addEventListener('click', onStart);
 
 function onStart() {
+  startBtn.disabled = true;
+  inputEl.disabled = true;
   const intervalId = setInterval(() => {
     const currentDate = Date.now();
     const { days, hours, minutes, seconds } = convertMs(
@@ -78,6 +80,6 @@ function addLeadingZero(value) {
 }
 
 function onEnd(id) {
-  clearInterval(id);
+  clearInterval(id); 
+  inputEl.disabled = false;
 }
-6;
